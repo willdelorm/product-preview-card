@@ -37,6 +37,15 @@ body {
   align-items: center;
 }
 
+.sr-only {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
 .card {
   max-width: 25em;
   border-radius: 0.5em;
@@ -52,7 +61,7 @@ body {
     }
   }
 
-  main {
+  section {
     padding: 2em;
 
     display: flex;
@@ -80,15 +89,18 @@ body {
       align-items: center;
       gap: 1em;
 
-      .product-price {
-        color: $color-green-500;
-        font-family: $font-serif;
-        font-size: 2em;
-        font-weight: $font-bold;
-        line-height: 1;
-      }
+      color: $color-green-500;
+      font-family: $font-serif;
+      font-size: 2em;
+      font-weight: $font-bold;
+      line-height: 1;
+
 
       .product-msrp {
+        color: $color-grey;
+        font-family: $font-sansserif;
+        font-size: 1rem;
+        font-weight: $font-normal;
         text-decoration: line-through;
       }
     }

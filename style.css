@@ -21,6 +21,15 @@ body {
   align-items: center;
 }
 
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .card {
   max-width: 25em;
   border-radius: 0.5em;
@@ -32,7 +41,7 @@ body {
   block-size: auto;
   border-radius: 0.5em 0.5em 0 0;
 }
-.card main {
+.card section {
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -40,34 +49,36 @@ body {
   align-items: stretch;
   gap: 1.5em;
 }
-.card main .product-category {
+.card section .product-category {
   font-size: 0.8em;
   letter-spacing: 0.5em;
   text-transform: uppercase;
 }
-.card main .product-name {
+.card section .product-name {
   color: hsl(212, 21%, 14%);
   font-family: "Fraunces", serif;
   font-size: 2em;
   font-weight: 700;
   line-height: 1;
 }
-.card main .price-container {
+.card section .price-container {
   display: flex;
   align-items: center;
   gap: 1em;
-}
-.card main .price-container .product-price {
   color: hsl(158, 36%, 37%);
   font-family: "Fraunces", serif;
   font-size: 2em;
   font-weight: 700;
   line-height: 1;
 }
-.card main .price-container .product-msrp {
+.card section .price-container .product-msrp {
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   text-decoration: line-through;
 }
-.card main .add-to-cart {
+.card section .add-to-cart {
   padding: 1em;
   border: none;
   border-radius: 0.5em;
@@ -79,8 +90,8 @@ body {
   align-items: center;
   gap: 0.5em;
 }
-.card main .add-to-cart:hover,
-.card main .add-to-cart:focus {
+.card section .add-to-cart:hover,
+.card section .add-to-cart:focus {
   background-color: hsl(158, 42%, 18%);
   cursor: pointer;
 }
