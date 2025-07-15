@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: hsl(30, 38%, 92%);
+  color: hsl(228, 12%, 48%);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 25em;
+  border-radius: 0.5em;
+  margin: 0.8em;
+  background-color: hsl(0, 0%, 100%);
+}
+.card picture img {
+  max-inline-size: 100%;
+  block-size: auto;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.card main {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1.5em;
+}
+.card main .product-category {
+  font-size: 0.8em;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+}
+.card main .product-name {
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1;
+}
+.card main .price-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.card main .price-container .product-price {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", serif;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1;
+}
+.card main .price-container .product-msrp {
+  text-decoration: line-through;
+}
+.card main .add-to-cart {
+  padding: 1em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.card main .add-to-cart:hover,
+.card main .add-to-cart:focus {
+  background-color: hsl(158, 42%, 18%);
+  cursor: pointer;
+}
+
+footer {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+@media (min-width: 30em) {
+  .card {
+    max-width: 40em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card picture img {
+    inline-size: auto;
+    block-size: 100%;
+    border-radius: 0.5em 0 0 0.5em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

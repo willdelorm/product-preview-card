@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$color-green-500: hsl(158, 36%, 37%);
+$color-green-700: hsl(158, 42%, 18%);
+
+$color-black: hsl(212, 21%, 14%);
+$color-grey: hsl(228, 12%, 48%);
+$color-cream: hsl(30, 38%, 92%);
+$color-white: hsl(0, 0%, 100%);
+
+$font-serif: "Fraunces", serif;
+$font-sansserif: "Montserrat", sans-serif;
+
+$font-normal: 500;
+$font-bold: 700;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: $color-cream;
+  color: $color-grey;
+  font-family: $font-sansserif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  min-height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 25em;
+  border-radius: 0.5em;
+  margin: 0.8em;
+
+  background-color: $color-white;
+
+  picture {
+    img {
+      max-inline-size: 100%;
+      block-size: auto;
+      border-radius: 0.5em 0.5em 0 0;
+    }
+  }
+
+  main {
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1.5em;
+
+    .product-category {
+      font-size: 0.8em;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+    }
+
+    .product-name {
+      color: $color-black;
+      font-family: $font-serif;
+      font-size: 2em;
+      font-weight: $font-bold;
+      line-height: 1;
+    }
+
+    .price-container {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+
+      .product-price {
+        color: $color-green-500;
+        font-family: $font-serif;
+        font-size: 2em;
+        font-weight: $font-bold;
+        line-height: 1;
+      }
+
+      .product-msrp {
+        text-decoration: line-through;
+      }
+    }
+
+    .add-to-cart {
+      padding: 1em;
+      border: none;
+      border-radius: 0.5em;
+
+      background-color: $color-green-500;
+      color: $color-white;
+      font-weight: $font-bold;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+    }
+
+    .add-to-cart:hover,
+    .add-to-cart:focus {
+      background-color: $color-green-700;
+      cursor: pointer;
+    }
+  }
+}
+
+footer {
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+@media (min-width: 30em) {
+  .card {
+    max-width: 40em;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    picture {
+      img {
+        inline-size: auto;
+        block-size: 100%;
+        border-radius: 0.5em 0 0 0.5em;
+      }
+    }
+  }
+}
